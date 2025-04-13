@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProStructs - Offline Mode</title>
+    <meta name="description" content="ProStructs is currently offline. Your data is safely stored and will sync when you're back online.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/samsung-optimizations.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1a0b3b">
+    <link rel="icon" href="images/favicon.svg">
+    <!-- iOS support -->
+    <link rel="apple-touch-icon" href="images/icons/icon-192x192.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#1a0b3b">
+    <style>
+        .offline-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .offline-icon {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 30px;
+            opacity: 0.8;
+        }
+        
+        .offline-title {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        .offline-message {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 30px;
+            color: var(--gray-text);
+        }
+        
+        .offline-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        @media (min-width: 768px) {
+            .offline-actions {
+                flex-direction: row;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="offline-container">
+        <div class="offline-icon">
+            <img src="images/icons/offline.svg" alt="Offline Icon">
+        </div>
+        <h1 class="offline-title">You're Offline</h1>
+        <p class="offline-message">
+            ProStructs is currently offline. Don't worry - your data is safely stored on your device and will automatically sync when you're back online.
+        </p>
+        <div class="offline-actions">
+            <button class="btn primary-btn" onclick="window.location.reload()">Try Again</button>
+            <a href="/" class="btn secondary-btn">Go to Home</a>
+        </div>
+        <div class="offline-features" style="margin-top: 40px; text-align: left; max-width: 600px;">
+            <h2 style="margin-bottom: 20px;">Available Offline Features:</h2>
+            <ul style="list-style-type: none; padding: 0;">
+                <li style="margin-bottom: 15px; display: flex; align-items: center;">
+                    <span style="display: inline-block; width: 10px; height: 10px; background: var(--accent-color); border-radius: 50%; margin-right: 10px;"></span>
+                    View existing clients and jobs
+                </li>
+                <li style="margin-bottom: 15px; display: flex; align-items: center;">
+                    <span style="display: inline-block; width: 10px; height: 10px; background: var(--accent-color); border-radius: 50%; margin-right: 10px;"></span>
+                    Create new quotes and invoices
+                </li>
+                <li style="margin-bottom: 15px; display: flex; align-items: center;">
+                    <span style="display: inline-block; width: 10px; height: 10px; background: var(--accent-color); border-radius: 50%; margin-right: 10px;"></span>
+                    Add new clients and jobs
+                </li>
+                <li style="margin-bottom: 15px; display: flex; align-items: center;">
+                    <span style="display: inline-block; width: 10px; height: 10px; background: var(--accent-color); border-radius: 50%; margin-right: 10px;"></span>
+                    Track time on existing jobs
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        // Check if we're back online
+        window.addEventListener('online', () => {
+            window.location.reload();
+        });
+    </script>
+</body>
+</html>

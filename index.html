@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProStructs - Construction Management Platform</title>
+    <meta name="description" content="ProStructs helps construction businesses manage jobs, clients, quotes, and invoices with powerful offline capabilities.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/samsung-optimizations.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1a0b3b">
+    <link rel="icon" href="images/favicon.svg">
+    <!-- iOS support -->
+    <link rel="apple-touch-icon" href="images/icons/icon-192x192.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#1a0b3b">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.svg" alt="ProStructs Logo">
+                <h1>ProStructs</h1>
+            </div>
+            <nav>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#download">Download</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Manage Your Construction Business Anywhere</h1>
+                <p>Schedule jobs, create quotes, send invoices, and manage clients - even when offline.</p>
+                <div class="cta-buttons">
+                    <a href="#download" class="btn primary-btn">Install App</a>
+                    <a href="#features" class="btn secondary-btn">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/app-preview.svg" alt="ProStructs App Preview">
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Powerful Features for Construction Professionals</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="images/icons/calendar.svg" alt="Calendar Icon">
+                    </div>
+                    <h3>Job Scheduling</h3>
+                    <p>Schedule jobs, set reminders, and manage your work calendar efficiently.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="images/icons/document.svg" alt="Document Icon">
+                    </div>
+                    <h3>Quotes & Invoices</h3>
+                    <p>Create professional quotes and invoices directly from your phone.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="images/icons/people.svg" alt="People Icon">
+                    </div>
+                    <h3>Client Management</h3>
+                    <p>Store client details, job history, and communication in one place.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="images/icons/offline.svg" alt="Offline Icon">
+                    </div>
+                    <h3>Works Offline</h3>
+                    <p>Full functionality even without internet connection on job sites.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2>How ProStructs Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Install the App</h3>
+                    <p>Add ProStructs to your home screen for easy access.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Set Up Your Business</h3>
+                    <p>Add your business details and customize your settings.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Add Clients & Jobs</h3>
+                    <p>Enter client information and schedule your first jobs.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Work Anywhere</h3>
+                    <p>Access everything you need, even without internet connection.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="download">
+        <div class="container">
+            <h2>Install ProStructs on Your Device</h2>
+            <div class="download-options">
+                <div class="download-card">
+                    <h3>Install as Web App</h3>
+                    <p>Add ProStructs to your home screen for an app-like experience with offline capabilities.</p>
+                    <div class="installation-steps">
+                        <h4>On Android (Samsung S24):</h4>
+                        <ol>
+                            <li>Open this website in Chrome or Samsung Internet</li>
+                            <li>Tap the menu button (three dots)</li>
+                            <li>Select "Add to Home screen" or "Install app"</li>
+                            <li>Follow the prompts to complete installation</li>
+                        </ol>
+                        <h4>On iPhone:</h4>
+                        <ol>
+                            <li>Open this website in Safari</li>
+                            <li>Tap the Share button</li>
+                            <li>Select "Add to Home Screen"</li>
+                            <li>Name it "ProStructs" and tap Add</li>
+                        </ol>
+                    </div>
+                    <button id="install-button" class="btn primary-btn">Install App</button>
+                    <p class="install-note">(This button will appear if installation is available on your device)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Does ProStructs work without internet?</span>
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Yes! ProStructs is designed to work offline. You can view clients, jobs, and create quotes even without an internet connection. Your data will automatically sync when you're back online.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Is my data secure?</span>
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Absolutely. ProStructs uses secure local storage on your device and encrypted connections when syncing data. Your business information stays private and protected.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>How do I update the app?</span>
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>As a Progressive Web App, ProStructs updates automatically when you visit the website. You'll always have the latest version without needing to manually update.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Can I use ProStructs on multiple devices?</span>
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Yes, you can install ProStructs on any device with a modern web browser. Your data will sync across all your devices when connected to the internet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.svg" alt="ProStructs Logo">
+                    <h2>ProStructs</h2>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#download">Download</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Have questions? We're here to help!</p>
+                    <a href="mailto:support@prostructs.com" class="contact-link">support@prostructs.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ProStructs. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="offline-notification" class="offline-notification">
+        <p>You are currently offline. Some features may be limited.</p>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/mobile-optimizations.js"></script>
+    <script>
+        // Register service worker for PWA functionality
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    })
+                    .catch(error => {
+                        console.log('ServiceWorker registration failed: ', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

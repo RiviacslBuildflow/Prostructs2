@@ -1,0 +1,209 @@
+/* Mobile-specific optimizations for Samsung S24 */
+
+/* Samsung S24 has a screen resolution of 1080 x 2340 pixels with a 19.5:9 aspect ratio */
+@media screen and (max-width: 412px) and (max-height: 915px), 
+       screen and (max-width: 915px) and (max-height: 412px) {
+    /* Adjust font sizes for better readability on Samsung S24 */
+    body {
+        font-size: 16px;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    /* Optimize touch targets for Samsung S24 */
+    .btn {
+        padding: 14px 24px; /* Larger touch target */
+        min-width: 120px; /* Ensure minimum width for touch */
+    }
+    
+    .nav-links li {
+        margin-left: 20px;
+    }
+    
+    .nav-links a {
+        padding: 10px 0; /* Larger touch area */
+    }
+    
+    /* Adjust spacing for Samsung S24 */
+    section {
+        padding: 60px 0;
+    }
+    
+    .hero {
+        padding: 100px 0 50px;
+    }
+    
+    /* Optimize feature cards for Samsung S24 */
+    .feature-card {
+        padding: 20px 15px;
+    }
+    
+    /* Adjust accordion for better touch on Samsung S24 */
+    .accordion-header {
+        padding: 18px 15px;
+    }
+    
+    /* Optimize installation steps for Samsung S24 */
+    .installation-steps ol {
+        padding-left: 15px;
+    }
+    
+    /* Ensure offline notification is visible but not intrusive */
+    .offline-notification {
+        width: 90%;
+        max-width: 380px;
+    }
+}
+
+/* Samsung-specific dark mode optimizations */
+@media (prefers-color-scheme: dark) {
+    /* Samsung's dark mode tends to be very dark, ensure contrast is maintained */
+    :root {
+        --primary-color: #2a1b4b;
+        --card-bg: #301957;
+    }
+    
+    /* Ensure text remains readable in Samsung's dark mode */
+    .feature-card p, 
+    .step p, 
+    .download-card p {
+        color: #d0d0d0;
+    }
+}
+
+/* Samsung S24 has high pixel density, optimize touch targets */
+@media (pointer: coarse) {
+    /* All interactive elements should have min 44px touch target */
+    .btn,
+    .nav-links a,
+    .accordion-header,
+    .mobile-menu-btn,
+    .footer-links a {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Add more space between touch targets */
+    .nav-links li,
+    .footer-links li {
+        margin-bottom: 15px;
+    }
+    
+    /* Make accordion easier to tap */
+    .accordion-header {
+        padding: 20px 15px;
+    }
+    
+    /* Ensure form elements are easily tappable */
+    input, 
+    select, 
+    textarea, 
+    button {
+        min-height: 44px;
+        font-size: 16px; /* Prevents zoom on focus in iOS */
+    }
+}
+
+/* Samsung S24 has a notch/punch hole, ensure content isn't hidden */
+@supports (padding-top: env(safe-area-inset-top)) {
+    header {
+        padding-top: env(safe-area-inset-top);
+    }
+    
+    .offline-notification {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+}
+
+/* Samsung S24 has gesture navigation, ensure bottom content isn't hidden */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+    footer {
+        padding-bottom: calc(20px + env(safe-area-inset-bottom));
+    }
+    
+    .offline-notification {
+        bottom: calc(20px + env(safe-area-inset-bottom));
+    }
+}
+
+/* Optimize for Samsung's high contrast mode */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-color: #0a0033;
+        --secondary-color: #2a0f6a;
+        --accent-color: #00a0ff;
+        --dark-bg: #000000;
+        --light-text: #ffffff;
+        --gray-text: #e0e0e0;
+        --card-bg: #15062a;
+    }
+    
+    /* Increase contrast for better readability */
+    .feature-card p,
+    .step p,
+    .download-card p {
+        color: #e0e0e0;
+    }
+    
+    /* Ensure buttons have strong contrast */
+    .primary-btn {
+        background: #00a0ff;
+        color: #000000;
+    }
+    
+    .secondary-btn {
+        border-width: 3px;
+    }
+}
+
+/* Optimize for Samsung's reduced motion setting */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
+    
+    html {
+        scroll-behavior: auto !important;
+    }
+    
+    .feature-card:hover {
+        transform: none !important;
+    }
+    
+    .primary-btn:hover,
+    .secondary-btn:hover {
+        transform: none !important;
+    }
+}
+
+/* Samsung S24 battery optimization */
+@media (prefers-color-scheme: dark) {
+    /* Use darker blacks for AMOLED screen to save battery */
+    body {
+        background-color: #000000;
+    }
+    
+    .card-bg {
+        background-color: #0a0033;
+    }
+}
+
+/* Samsung S24 specific touch feedback */
+@media (hover: none) {
+    /* Add active state styles for touch feedback */
+    .btn:active,
+    .nav-links a:active,
+    .accordion-header:active,
+    .feature-card:active {
+        opacity: 0.7;
+        transition: opacity 0.1s;
+    }
+}
